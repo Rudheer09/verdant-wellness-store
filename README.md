@@ -1,42 +1,38 @@
 # Verdant — Wellness & Skincare Storefront
 
-A responsive React + Vite storefront concept for the ShadowFox UI/UX Intermediate task. This project includes a GitHub Actions workflow that builds and deploys the site to GitHub Pages.
+Verdant is a modern, responsive wellness and skincare storefront built with React and Vite. It offers a clean shopping experience with product discovery, category filtering, search, sorting, product details, and interactive cart management.
 
-## Deploy directly with GitHub Actions
+## Features
 
-1. Create a GitHub repository named **`verdant-wellness-store`**.
-2. Upload the **contents of this folder** to the repository root (so `package.json`, `index.html`, `vite.config.js`, `src/`, and `.github/` are at the root).
-3. In GitHub, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
-4. Ensure the default branch is named **`main`**. The workflow runs automatically on each push to `main`; you can also start it from **Actions → Deploy Verdant to GitHub Pages → Run workflow**.
-5. When the workflow succeeds, open **Settings → Pages** to find your published site.
+- Responsive homepage and brand introduction
+- Product catalogue with category filters
+- Product search and price sorting
+- Individual product detail views
+- Shopping cart with quantity controls and subtotal calculation
+- Demo checkout interface
+- About section and newsletter interface
+- Responsive layouts for desktop and mobile devices
 
-The expected URL is `https://YOUR-GITHUB-USERNAME.github.io/verdant-wellness-store/`.
+## Technologies
 
-**Important:** The Vite base path in `vite.config.js` is set to `/verdant-wellness-store/`. If you name your repository something else, change the `base` value to `'/YOUR-REPOSITORY-NAME/'` before deploying. If your repository uses a branch other than `main`, update `.github/workflows/deploy.yml` accordingly.
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- GitHub Actions
+- GitHub Pages
 
-## Run locally
+## Deployment
 
-Requires Node.js 22 or a compatible current LTS release.
+The website is configured for automated deployment to GitHub Pages using GitHub Actions.
 
-```bash
-npm install
-npm run dev
-```
+## Notes
 
-To test a production build locally:
+Verdant is a front-end project developed for the ShadowFox UI/UX Intermediate Task. The checkout is for demonstration purposes and does not process real payments. The newsletter interface is not connected to a subscription backend. Product content and imagery are illustrative, and product images are loaded from Unsplash.
 
-```bash
-npm run build
-npm run preview
-```
+---
 
-## Included
-
-- Responsive homepage and brand story
-- Product listing with category filters, search, and price sorting
-- Product detail views
-- Shopping cart drawer with quantity controls and subtotal
-- Demo checkout flow and newsletter UI
-- GitHub Actions workflow for GitHub Pages deployment
-
-This is a front-end concept: checkout is a demo and does not process payments. Product content and imagery are illustrative; images are loaded from remote Unsplash URLs.
+**Project:** Verdant — Wellness & Skincare Storefront
+**Built with:** React + Vite
+**Hosting:** GitHub Pages
