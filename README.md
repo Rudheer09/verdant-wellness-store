@@ -1,85 +1,42 @@
 # Verdant — Wellness & Skincare Storefront
 
-## Overview
+A responsive React + Vite storefront concept for the ShadowFox UI/UX Intermediate task. This project includes a GitHub Actions workflow that builds and deploys the site to GitHub Pages.
 
-Verdant is a modern, responsive e-commerce website concept focused on wellness and skincare products. It provides a clean and intuitive shopping experience, allowing users to explore products, discover items by category, view product details, and manage their shopping cart.
+## Deploy directly with GitHub Actions
 
-The website is built using React and Vite, with responsive styling for desktop and mobile devices.
+1. Create a GitHub repository named **`verdant-wellness-store`**.
+2. Upload the **contents of this folder** to the repository root (so `package.json`, `index.html`, `vite.config.js`, `src/`, and `.github/` are at the root).
+3. In GitHub, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
+4. Ensure the default branch is named **`main`**. The workflow runs automatically on each push to `main`; you can also start it from **Actions → Deploy Verdant to GitHub Pages → Run workflow**.
+5. When the workflow succeeds, open **Settings → Pages** to find your published site.
 
-## Features
+The expected URL is `https://YOUR-GITHUB-USERNAME.github.io/verdant-wellness-store/`.
 
-- **Homepage:** Introduces the Verdant brand and highlights featured products.
-- **Product Catalogue:** Displays available skincare and wellness products.
-- **Category Filtering:** Allows users to browse products by category.
-- **Search:** Helps users find products by name or relevant details.
-- **Price Sorting:** Organizes products according to price.
-- **Product Details:** Provides individual product information and imagery.
-- **Shopping Cart:** Allows users to add products, adjust quantities, remove items, and view the subtotal.
-- **Demo Checkout:** Provides a sample checkout experience.
-- **About Section:** Introduces the brand and its concept.
-- **Newsletter Interface:** Includes a user interface for newsletter subscriptions.
-- **Responsive Design:** Adapts the layout to different screen sizes.
+**Important:** The Vite base path in `vite.config.js` is set to `/verdant-wellness-store/`. If you name your repository something else, change the `base` value to `'/YOUR-REPOSITORY-NAME/'` before deploying. If your repository uses a branch other than `main`, update `.github/workflows/deploy.yml` accordingly.
 
-## Technologies Used
+## Run locally
 
-- **React** — Component-based user interface development.
-- **Vite** — Development server and production build tooling.
-- **JavaScript** — Application logic and user interactions.
-- **HTML5** — Website structure.
-- **CSS3** — Styling, layouts, and responsive design.
-- **GitHub Actions** — Automated build and deployment workflow.
-- **GitHub Pages** — Website hosting.
-
-## User Experience
-
-Verdant uses a clean visual design, organized product layouts, and straightforward navigation to make product discovery and cart management simple. Interactive elements provide a foundation for an e-commerce shopping experience across desktop and mobile devices.
-
-## Project Structure
-
-```text
-verdant-wellness-store/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-├── src/
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
-
-The `src/` directory contains the React application and its interface components. The configuration files define the development environment, build process, and GitHub Pages deployment workflow.
-
-## Running Locally
-
-Ensure Node.js and npm are installed.
-
-Install the project dependencies:
+Requires Node.js 22 or a compatible current LTS release.
 
 ```bash
 npm install
-```
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
-Create a production build:
+To test a production build locally:
 
 ```bash
 npm run build
+npm run preview
 ```
 
-## Deployment
+## Included
 
-The project includes a GitHub Actions workflow configured to build and deploy the website to GitHub Pages. Once the repository and Pages settings are configured, changes pushed to the configured branch can trigger an automated deployment.
+- Responsive homepage and brand story
+- Product listing with category filters, search, and price sorting
+- Product detail views
+- Shopping cart drawer with quantity controls and subtotal
+- Demo checkout flow and newsletter UI
+- GitHub Actions workflow for GitHub Pages deployment
 
-## Limitations
-
-This project is a front-end e-commerce concept. The checkout does not process real payments, and the newsletter interface is not connected to a subscription service. Product content and imagery are illustrative, with images loaded from Unsplash.
-
-## Conclusion
-
-Verdant demonstrates responsive web design, React component development, interactive product browsing, shopping cart functionality, and an automated deployment workflow. It serves as a foundation for a more complete wellness and skincare e-commerce platform.
+This is a front-end concept: checkout is a demo and does not process payments. Product content and imagery are illustrative; images are loaded from remote Unsplash URLs.
